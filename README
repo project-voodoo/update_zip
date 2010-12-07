@@ -1,0 +1,3 @@
+usage:
+
+./scripts/build_update.zips.sh ../your/zImage
