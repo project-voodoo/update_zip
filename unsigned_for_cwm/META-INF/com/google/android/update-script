@@ -1,0 +1,6 @@
+show_progress 0.1 0
+copy_dir PACKAGE:kernel_flasher TMP:kernel_flasher
+set_perm 0 0 00755 TMP:kernel_flasher/redbend_ua
+run_program /tmp/kernel_flasher/redbend_ua restore /tmp/kernel_flasher/zImage /dev/block/bml7
+show_progress 0.1 10
+
