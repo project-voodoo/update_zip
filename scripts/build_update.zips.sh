@@ -1,6 +1,7 @@
 #!/bin/sh
 test -n "$1" || exit 1
 
+mkdir -p output
 zimage_file=`readlink -f "$1"`
 start_pwd=$PWD
 
