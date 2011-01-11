@@ -1,0 +1,13 @@
+# Flashing kernel from the update.zip
+# Copyright Francois SIMOND
+# License : WTFPL
+
+# display a short info message
+ui_print("Kernel flasher");
+
+# check if we run on the appropriate hardware
+package_extract_dir("kernel_flasher", "/tmp/kernel_flasher");
+set_perm(0, 0, 0755, "/tmp/kernel_flasher/redbend_ua");
+
+# running the flash operation
+run_program("/tmp/kernel_flasher/redbend_ua", "restore", "/tmp/kernel_flasher/zImage", "/dev/block/bml7");

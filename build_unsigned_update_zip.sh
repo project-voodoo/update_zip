@@ -25,7 +25,6 @@ fi
 
 
 cd $my_pwd
-mkdir -p `basename $dest_update_zip`
 cp $zImage template/kernel_flasher/zImage || exit 1
 
 cd template/
