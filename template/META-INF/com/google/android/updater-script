@@ -3,7 +3,9 @@
 # License : WTFPL
 
 # display a short info message
-ui_print("Kernel flasher");
+ui_print("");
+ui_print("Flashing kernel...");
+ui_print("");
 
 # check if we run on the appropriate hardware
 package_extract_dir("kernel_flasher", "/tmp/kernel_flasher");
@@ -11,3 +13,6 @@ set_perm(0, 0, 0755, "/tmp/kernel_flasher/redbend_ua");
 
 # running the flash operation
 run_program("/tmp/kernel_flasher/redbend_ua", "restore", "/tmp/kernel_flasher/zImage", "/dev/block/bml7");
+
+ui_print("new Kernel now installed.");
+ui_print("");
