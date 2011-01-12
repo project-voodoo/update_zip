@@ -7,7 +7,7 @@ ui_print("");
 ui_print("Flashing kernel...");
 ui_print("");
 
-# check if we run on the appropriate hardware
+# extract files from zip to ramdisk
 package_extract_dir("kernel_flasher", "/tmp/kernel_flasher");
 set_perm(0, 0, 0755, "/tmp/kernel_flasher/redbend_ua");
 
